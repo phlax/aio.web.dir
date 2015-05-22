@@ -1,0 +1,10 @@
+<ul class="unstyled directory">
+  <li class="folder"><a href="..">..</a></li>
+  {% for folder in folders %}
+  <li class="folder"><div class="icon"></div><a href="{{ folder }}/">{{ folder }}</a></li>
+  {% endfor %}
+  {% for name, file in files.items() %}
+  <li class="file"><div class="icon {{ file.class }}"></div><a href="{{ name }}">{{ name }}</a></li>
+  {% endfor %}  
+</ul>
+
